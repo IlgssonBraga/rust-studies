@@ -5,6 +5,10 @@ fn main() {
 
     let mut num2: String = String::new().to_string();
 
+    let fn_pointer: fn() = message;
+
+    to_do_things(fn_pointer);
+
     println!("Entre com um valor: ");
     io::stdin().read_line(&mut num1);
 
@@ -25,5 +29,13 @@ fn main() {
 }
 
 fn sum(a: i32, b: i32) -> i32 {
-    return a + b;
+    a + b
+}
+
+fn message() {
+    println!("Hi, my name is Ilgsson");
+}
+
+fn to_do_things(function: fn()) {
+    function()
 }
