@@ -1,7 +1,9 @@
 // mod chars;
-mod booleans;
+// mod booleans;
+mod numeric_values;
 
 fn main() {
     // chars::run();
-    booleans::run();
+    // booleans::run();
+    numeric_values::run();
 }
