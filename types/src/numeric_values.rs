@@ -20,11 +20,22 @@ pub fn run() {
     //     u128::max_value()
     // );
 
-    let number: i8 = 1;
+    // let number: i8 = 1;
 
-    println!("count ones: {}", number.count_ones());
-    println!("count zeros: {}", number.count_zeros());
-    println!("rotate left: {}", number.rotate_left(7));
-    println!("rotate right: {}", number.rotate_right(8));
-    println!("swap bytes: {}", number.swap_bytes());
+    // println!("count ones: {}", number.count_ones());
+    // println!("count zeros: {}", number.count_zeros());
+    // println!("rotate left: {}", number.rotate_left(7));
+    // println!("rotate right: {}", number.rotate_right(8));
+    // println!("swap bytes: {}", number.swap_bytes());
+
+    let a: f32 = 3.549236;
+
+    println!("Floor : {}", a.floor());
+    println!("Ceil : {}", a.ceil());
+    println!("Round : {}", a.round());
+    println!("Trunc : {}", a.trunc());
+    println!("Fract : {}", a.fract());
+    println!("Is finite : {}", a.is_finite());
+    println!("Is infinite : {}", a.is_infinite());
+    println!("Is nan : {}", a.is_nan());
 }
