@@ -1,42 +1,23 @@
-trait Cars {
-    fn new(marca: &'static str, modelo: &'static str) -> Self;
+use std::ops::Add;
 
-    fn marca(&self) -> &'static str;
-
-    fn modelo(&self) -> &'static str;
-
-    fn message(&self) -> &'static str;
+#[derive(Copy, Clone)]
+struct Person {
+    name: &'static str,
+    age: i32,
 }
 
-#[derive(Debug)]
-struct Car {
-    marca: &'static str,
-    modelo: &'static str,
-}
-
-impl Cars for Car {
-    fn new(marca: &'static str, modelo: &'static str) -> Car {
-        Car { marca, modelo }
-    }
-
-    fn marca(&self) -> &'static str {
-        self.marca
-    }
-
-    fn modelo(&self) -> &'static str {
-        self.modelo
-    }
-
-    fn message(&self) -> &'static str {
-        "Trait Cars implementada"
+impl Add<i32> for Person {
+    type Output = i32;
+    fn add(self, b: i32) -> i32 {
+        self.age + b
     }
 }
 
 fn main() {
-    let ferrari1: Car = Cars::new("Ferrari", "F50");
-
-    println!("{}", ferrari1.message());
-    println!("Marca: {}", ferrari1.marca());
-    println!("Modelo: {}", ferrari1.modelo());
-    println!("{:?}", ferrari1);
+    let p1 = Person {
+        name: "Marcelo",
+        age: 39,
+    };
+    let x = p1 + 10;
+    println!("A nova idade de {} é {}", p1.name, x);
 }
