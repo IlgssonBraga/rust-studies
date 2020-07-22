@@ -1,25 +1,13 @@
-fn check_sit(nota: f32) {
-    if nota < 3.0 {
-        println!("Reprovado direto");
-    } else if nota >= 3.0 && nota < 7.0 {
-        println!("Avaliação final");
-    } else if nota >= 7.0 && nota < 10.0 {
-        println!("Aprovado por média");
-    } else if nota == 10.0 {
-        println!("Aprovado com excelência");
-    }
-}
-
 fn main() {
-    let nota: f32 = 10.0;
+    let some_u8_value = Some(2);
+    // match some_u8_value {
+    //     Some(3) => println!("three"),
+    //     _ => println!("different three"),
+    // }
 
-    check_sit(nota);
+    if let Some(3) = some_u8_value {
+        println!("three")
+    }
 
-    // let x = if 10 + 5 == 15 {
-    //     "10 + 5 = 15"
-    // } else {
-    //     "10 + 5 != 15"
-    // };
-
-    // println!("{}", x);
+    println!("{}", Some(2) == 2)
 }
